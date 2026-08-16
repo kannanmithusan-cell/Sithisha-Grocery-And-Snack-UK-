@@ -1,9 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Heart, ArrowRight } from 'lucide-react';
+import { Heart } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 import { IEditorialImage } from '@/models/HomepageConfig';
 
@@ -11,9 +10,34 @@ interface BrandStorySectionProps {
   editorialImages?: IEditorialImage[];
 }
 
+const DEFAULT_BRAND_STORY_IMG = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=800&auto=format&fit=crop&q=80';
+const FALLBACK_BRAND_STORY_IMG = 'https://images.unsplash.com/photo-1621996346565-e3d5d6281276?w=800&auto=format&fit=crop&q=80';
+
+function BrandStoryImage({ src, alt }: { src: string; alt: string }) {
+  const [imgSrc, setImgSrc] = useState<string>(src || DEFAULT_BRAND_STORY_IMG);
+
+  return (
+    <Image
+      src={imgSrc}
+      alt={alt}
+      fill
+      unoptimized
+      className="object-cover group-hover:scale-105 transition-transform duration-700"
+      sizes="(max-width: 1024px) 100vw, 40vw"
+      onError={() => {
+        if (imgSrc !== DEFAULT_BRAND_STORY_IMG) {
+          setImgSrc(DEFAULT_BRAND_STORY_IMG);
+        } else {
+          setImgSrc(FALLBACK_BRAND_STORY_IMG);
+        }
+      }}
+    />
+  );
+}
+
 export default function BrandStorySection({ editorialImages = [] }: BrandStorySectionProps) {
   const adminImg = editorialImages.find((img) => img.section === 'brand-story' && img.active);
-  const imgUrl = adminImg?.url || 'https://images.unsplash.com/photo-1621996346565-e3d5d6281276?w=800&auto=format&fit=crop&q=80';
+  const imgUrl = adminImg?.url || DEFAULT_BRAND_STORY_IMG;
   const title = (adminImg?.title || 'FOOD THAT FEELS LIKE HOME.').replace(/grocery|groceries/gi, 'Masala & Snacks');
   const subtitle =
     (adminImg?.subtitle ||
@@ -37,7 +61,7 @@ export default function BrandStorySection({ editorialImages = [] }: BrandStorySe
           </div>
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md aspect-[4/3] rounded-3xl overflow-hidden border-2 border-amber-300 shadow-xl bg-white group">
-              <Image src={imgUrl} alt={title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 1024px) 100vw, 40vw" />
+              <BrandStoryImage src={imgUrl} alt={title} />
             </div>
           </div>
         </div>

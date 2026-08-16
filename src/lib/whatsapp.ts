@@ -46,8 +46,15 @@ export function buildWhatsAppUrl(phoneNumber: string, messageText: string): stri
     cleanPhone = cleanPhone.slice(1);
   }
 
-  // NOTE: Do NOT auto-convert local numbers — the WhatsApp number must be stored
-  // in full international format in the admin settings (e.g. 94741530377 or 447415303770).
+  // Auto-convert local UK 07... numbers to 447... if missing country code
+  if (cleanPhone.startsWith('07')) {
+    cleanPhone = '44' + cleanPhone.slice(1);
+  } else if (cleanPhone.length === 9 || cleanPhone.length === 10) {
+    // If entered as 774014919... without 44 or 0, prepend 44
+    if (cleanPhone.startsWith('7')) {
+      cleanPhone = '44' + cleanPhone;
+    }
+  }
 
   const encodedText = encodeURIComponent(messageText);
   return `https://wa.me/${cleanPhone}?text=${encodedText}`;

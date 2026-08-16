@@ -4,7 +4,7 @@ import Product from '@/models/Product';
 import Category from '@/models/Category';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://sithishamasala.co.uk';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sithishamasalaandsnacks.com';
 
   // Base static pages
   const staticRoutes: MetadataRoute.Sitemap = [

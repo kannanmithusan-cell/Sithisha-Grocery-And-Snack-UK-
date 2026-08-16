@@ -11,7 +11,7 @@ import { ArrowLeft, ShieldCheck, Truck, RefreshCw, MessageCircle } from 'lucide-
 import ProductCard from '@/components/ProductCard';
 import JsonLd, { getProductSchema, getBreadcrumbSchema } from '@/components/JsonLd';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://sithishamasala.co.uk';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sithishamasalaandsnacks.com';
 
 interface ProductDetailPageProps {
   params: Promise<{ slug: string }>;

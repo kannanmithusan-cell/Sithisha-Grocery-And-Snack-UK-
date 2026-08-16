@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 import CartDrawer from '@/components/CartDrawer';
 import { Toaster } from 'react-hot-toast';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://sithishamasala.co.uk';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sithishamasalaandsnacks.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

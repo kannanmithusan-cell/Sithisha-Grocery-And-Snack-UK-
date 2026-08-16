@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ICategory } from '@/types';
@@ -8,6 +8,39 @@ import { Sparkles, ArrowRight } from 'lucide-react';
 
 interface QuickCategoryStripProps {
   categories: ICategory[];
+}
+
+const DEFAULT_CATEGORY_IMAGES: Record<string, string> = {
+  'snacks-savouries': 'https://images.unsplash.com/photo-1621996346565-e3d5d6281276?w=600&auto=format&fit=crop&q=80',
+  'spices-masalas': 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&auto=format&fit=crop&q=80',
+  'rice-grains': 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&auto=format&fit=crop&q=80',
+  'sweets-biscuits': 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&auto=format&fit=crop&q=80',
+  'beverages': 'https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&auto=format&fit=crop&q=80',
+  'pickles-sauces': 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&auto=format&fit=crop&q=80',
+};
+
+const FALLBACK_CATEGORY_IMG = 'https://images.unsplash.com/photo-1621996346565-e3d5d6281276?w=600&auto=format&fit=crop&q=80';
+
+function CategoryImage({ src, alt, slug }: { src?: string; alt: string; slug: string }) {
+  const initialSrc = src || DEFAULT_CATEGORY_IMAGES[slug] || FALLBACK_CATEGORY_IMG;
+  const [imgSrc, setImgSrc] = useState<string>(initialSrc);
+
+  return (
+    <Image
+      src={imgSrc}
+      alt={alt}
+      fill
+      unoptimized
+      className="object-cover"
+      onError={() => {
+        if (imgSrc !== DEFAULT_CATEGORY_IMAGES[slug] && DEFAULT_CATEGORY_IMAGES[slug]) {
+          setImgSrc(DEFAULT_CATEGORY_IMAGES[slug]);
+        } else {
+          setImgSrc(FALLBACK_CATEGORY_IMG);
+        }
+      }}
+    />
+  );
 }
 
 function getCardShapeStyle(cat: ICategory, index: number): { shapeClass: string; bgClass: string } {
@@ -59,13 +92,7 @@ export default function QuickCategoryStrip({ categories }: QuickCategoryStripPro
               >
                 {/* Large Food Photography */}
                 <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-white/70 shadow-xs border border-black/5 mb-3 group-hover:scale-105 transition-transform duration-500">
-                  <Image
-                    src={cat.image || 'https://images.unsplash.com/photo-1621996346565-e3d5d6281276?w=400'}
-                    alt={cat.name}
-                    fill
-                    unoptimized
-                    className="object-cover"
-                  />
+                  <CategoryImage src={cat.image} alt={cat.name} slug={cat.slug} />
                 </div>
 
                 <div className="text-center space-y-0.5">

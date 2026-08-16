@@ -45,6 +45,9 @@ export const metadata: Metadata = {
     shortcut: '/logo-circle.png',
     apple: '/logo-circle.png',
   },
+  verification: {
+    google: 'google81ae0b62f7b85a52',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_GB',

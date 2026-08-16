@@ -37,6 +37,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: [
+      { url: '/logo-circle.png', type: 'image/png' },
+      { url: '/favicon.ico', type: 'image/x-icon' },
+    ],
+    shortcut: '/logo-circle.png',
+    apple: '/logo-circle.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_GB',

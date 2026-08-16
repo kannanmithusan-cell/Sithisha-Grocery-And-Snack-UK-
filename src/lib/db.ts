@@ -1,18 +1,9 @@
 import mongoose from 'mongoose';
-import dns from 'dns';
 
-// Fix Windows Node.js DNS lookup for MongoDB Atlas cloud connection
-try {
-  dns.setDefaultResultOrder('ipv4first');
-  dns.setServers(['8.8.8.8', '1.1.1.1', '8.8.4.4']);
-} catch (dnsErr) {
-  console.warn('DNS custom configuration warning:', dnsErr);
-}
-
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/sithisha-masala-snacks';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 if (!MONGODB_URI) {
-  throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
+  throw new Error('MONGODB_URI is not defined! Please set MONGODB_URI in Vercel Settings -> Environment Variables.');
 }
 
 /**
@@ -44,7 +35,6 @@ export async function connectToDatabase(): Promise<typeof mongoose> {
   if (!cached?.promise) {
     const opts = {
       bufferCommands: false,
-      serverSelectionTimeoutMS: 10000,
     };
 
     cached!.promise = mongoose.connect(MONGODB_URI, opts).then((mongooseInstance) => {

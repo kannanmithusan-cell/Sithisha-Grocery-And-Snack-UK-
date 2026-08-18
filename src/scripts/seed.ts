@@ -272,19 +272,19 @@ async function seed() {
     await Settings.create({
       storeName: 'Sithisha Masala&snacks',
       address: '120 Parsons Hill, Birmingham, B30 3QP, United Kingdom',
-      phone: '+44 121 444 8899',
-      email: 'info@sithisha.co.uk',
-      whatsappNumber: process.env.WHATSAPP_NUMBER || '',
+      phone: '+44 7393 139705',
+      email: 'Kannanmithusan@gmail.com',
+      whatsappNumber: process.env.WHATSAPP_NUMBER || '447393139705',
       deliveryFee: 3.0,
       freeDeliveryThreshold: 30.0,
       currency: 'GBP',
     });
 
     console.log('Seeding admin user...');
-    const passwordHash = await bcrypt.hash('admin123', 10);
+    const passwordHash = await bcrypt.hash('Sithisha@05', 10);
     await User.create({
       name: 'Sithisha Admin',
-      email: 'admin@sithisha.co.uk',
+      email: 'admin@sithisha',
       passwordHash,
       role: 'admin',
     });

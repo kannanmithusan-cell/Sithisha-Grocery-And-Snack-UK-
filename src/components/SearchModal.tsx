@@ -141,7 +141,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ onClose }) => {
 
           {!query && (
             <div className="py-6 text-center text-slate-400 text-xs">
-              Type above to search our full catalog of authentic UK masalas & snacks.
+              Type above to search our full catalog of authentic Jaffna & Indian masalas & snacks.
             </div>
           )}
         </div>

@@ -293,7 +293,7 @@ export default function AdminSettingsPage() {
                   maxLength={15}
                   value={waLocalNumber}
                   onChange={(e) => setWaLocalNumber(e.target.value.replace(/[^0-9]/g, ''))}
-                  placeholder="741530377"
+                  placeholder="7393139705"
                   className="flex-1 px-4 py-2.5 rounded-xl border border-slate-200 text-xs font-extrabold bg-emerald-50/50 text-emerald-950 outline-none focus:border-emerald-600"
                 />
               </div>
@@ -312,7 +312,7 @@ export default function AdminSettingsPage() {
                   const val = e.target.value.replace(/[^0-9+\s-]/g, '');
                   setFormData({ ...formData, phone: val });
                 }}
-                placeholder="e.g. 0741530377"
+                placeholder="e.g. 07393139705"
                 className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-xs font-medium bg-slate-50 outline-none"
               />
             </div>

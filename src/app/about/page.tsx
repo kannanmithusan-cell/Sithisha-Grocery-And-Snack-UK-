@@ -47,7 +47,7 @@ export default function AboutPage() {
             About Sithisha Masala & Snacks
           </h1>
           <p className="text-xs sm:text-sm text-purple-200 font-medium leading-relaxed">
-            Bringing authentic South Asian flavours, hand-roasted curry powders, crispy Jaffna savouries, and everyday UK masalas to your kitchen table.
+            Bringing authentic South Asian flavours, hand-roasted curry powders, crispy Jaffna savouries, and everyday Jaffna & Indian masalas to your kitchen table.
           </p>
         </div>
       </div>
@@ -106,10 +106,10 @@ export default function AboutPage() {
               <MapPin className="w-4 h-4 text-purple-700" /> 120 Parsons Hill, Birmingham, B30 3QP, United Kingdom
             </p>
             <p className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-purple-700" /> 0741530377
+              <Phone className="w-4 h-4 text-purple-700" /> +44 7393 139705
             </p>
             <p className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-purple-700" /> info@sithisha.co.uk
+              <Mail className="w-4 h-4 text-purple-700" /> Kannanmithusan@gmail.com
             </p>
           </div>
         </div>

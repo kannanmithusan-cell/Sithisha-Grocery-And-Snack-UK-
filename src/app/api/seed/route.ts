@@ -204,7 +204,7 @@ export async function GET() {
       storeName: 'Sithisha Masala&snacks',
       address: '120 Parsons Hill, Birmingham, B30 3QP, United Kingdom',
       phone: '07393139705',
-      email: 'info@sithisha.co.uk',
+      email: 'Kannanmithusan@gmail.com',
       whatsappNumber: '447393139705',
       deliveryFee: 3.0,
       freeDeliveryThreshold: 30.0,
@@ -213,10 +213,10 @@ export async function GET() {
 
     // Seed Admin User
     await User.deleteMany({});
-    const passwordHash = await bcrypt.hash('admin123', 10);
+    const passwordHash = await bcrypt.hash('Sithisha@05', 10);
     await User.create({
       name: 'Store Administrator',
-      email: 'admin@sithisha.co.uk',
+      email: 'admin@sithisha',
       passwordHash,
       role: 'admin',
     });

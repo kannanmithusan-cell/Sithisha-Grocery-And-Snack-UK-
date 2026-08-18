@@ -16,9 +16,9 @@ export async function GET() {
       settings = await Settings.create({
         storeName: 'Sithisha Masala&snacks',
         address: '120 Parsons Hill, Birmingham, B30 3QP, United Kingdom',
-        phone: '0741530377',
-        email: 'info@sithisha.co.uk',
-        whatsappNumber: '0741530377',
+        phone: '07393139705',
+        email: 'Kannanmithusan@gmail.com',
+        whatsappNumber: '447393139705',
         deliveryFee: 3.0,
         freeDeliveryThreshold: 30.0,
         currency: 'GBP',

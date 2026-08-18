@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contact Us | Sithisha Masala & Snacks Birmingham UK',
     description:
-      'Contact Sithisha Masala & Snacks at 120 Parsons Hill, Birmingham, B30 3QP or via WhatsApp at 0741530377.',
+      'Contact Sithisha Masala & Snacks at 120 Parsons Hill, Birmingham, B30 3QP or via WhatsApp at +44 7393 139705.',
     url: `${SITE_URL}/contact`,
   },
 };

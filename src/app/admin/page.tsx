@@ -132,7 +132,7 @@ export default async function AdminDashboardPage() {
 
           <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-1">
             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Display Store Phone</span>
-            <span className="font-bold text-slate-900 text-sm">{metrics.settings?.phone || '0741530377'}</span>
+            <span className="font-bold text-slate-900 text-sm">{metrics.settings?.phone || '07393139705'}</span>
           </div>
 
           <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-1">
@@ -142,7 +142,7 @@ export default async function AdminDashboardPage() {
 
           <div className="p-4 bg-slate-50 rounded-2xl border border-slate-100 space-y-1">
             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Store Support Email</span>
-            <span className="font-bold text-slate-900 truncate block">{metrics.settings?.email || 'info@sithisha.co.uk'}</span>
+            <span className="font-bold text-slate-900 truncate block">{metrics.settings?.email || 'Kannanmithusan@gmail.com'}</span>
           </div>
         </div>
       </div>

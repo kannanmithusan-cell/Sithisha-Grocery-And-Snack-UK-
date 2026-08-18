@@ -187,7 +187,7 @@ export default function HomepageManagementPage() {
       const newHero: IHeroImage = {
         url: uploaded.url,
         publicId: uploaded.publicId,
-        badge: 'AUTHENTIC UK MASALA & SNACKS',
+        badge: 'AUTHENTIC JAFFNA & INDIAN MASALA & SNACKS',
         title: 'A Little Taste of Home,',
         titleHighlight: 'Delivered to Your Door.',
         description: 'Discover quality masalas, snacks, and pure spices delivered to your door.',

@@ -153,14 +153,14 @@ export default function WhatsAppDebugPage() {
         <h2 className="text-sm font-extrabold text-amber-900">Force Update Production WhatsApp Number</h2>
         <p className="text-xs text-amber-800">
           Use this to directly update the WhatsApp number in the production MongoDB database.
-          Enter the number in international format (e.g. 447415303770).
+          Enter the number in international format (e.g. 447393139705).
         </p>
         <div className="flex gap-3">
           <input
             type="text"
             value={newNumber}
             onChange={(e) => setNewNumber(e.target.value.replace(/[^0-9+]/g, ''))}
-            placeholder="e.g. 447415303770"
+            placeholder="e.g. 447393139705"
             className="flex-1 px-4 py-2.5 rounded-xl border border-amber-300 text-xs font-mono focus:outline-none focus:border-amber-600 bg-white"
           />
           <button

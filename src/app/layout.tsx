@@ -12,7 +12,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.sithishamasala
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Sithisha Masala & Snacks — Authentic UK Masalas, Jaffna Snacks & Spices',
+    default: 'Sithisha Masala & Snacks — Authentic Jaffna & Indian Masalas, Jaffna Snacks & Spices',
     template: '%s | Sithisha Grocery & Snack UK',
   },
   description:
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   keywords: [
     'Sithisha Masala & Snacks',
     'Jaffna Mixture UK',
-    'UK Masala & Snacks',
+    'Jaffna & Indian Masala & Snacks',
     'Birmingham Sri Lankan Store',
     'Parsons Hill Asian Grocery',
     'South Asian Savouries',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     locale: 'en_GB',
     url: SITE_URL,
     siteName: 'Sithisha Masala & Snacks UK',
-    title: 'Sithisha Masala & Snacks — Authentic UK Masalas, Jaffna Snacks & Spices',
+    title: 'Sithisha Masala & Snacks — Authentic Jaffna & Indian Masalas, Jaffna Snacks & Spices',
     description:
       'Order authentic South Asian masalas, Jaffna mixture snacks, Ceylon spices, and everyday household essentials in Birmingham, UK. Fast delivery and direct WhatsApp ordering.',
     images: [
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sithisha Masala & Snacks — Authentic UK Masalas, Jaffna Snacks & Spices',
+    title: 'Sithisha Masala & Snacks — Authentic Jaffna & Indian Masalas, Jaffna Snacks & Spices',
     description:
       'Authentic South Asian masalas, Jaffna mixture snacks, Ceylon spices & everyday groceries in Birmingham, UK.',
     images: ['/hero-showcase.png'],

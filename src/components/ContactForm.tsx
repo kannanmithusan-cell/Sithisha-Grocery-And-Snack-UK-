@@ -94,7 +94,7 @@ export default function ContactForm() {
               </div>
               <div>
                 <h4 className="font-bold text-slate-900">Phone Contact</h4>
-                <p className="text-slate-500 mt-0.5">0741530377</p>
+                <p className="text-slate-500 mt-0.5">+44 7393 139705</p>
               </div>
             </div>
 
@@ -104,7 +104,7 @@ export default function ContactForm() {
               </div>
               <div>
                 <h4 className="font-bold text-slate-900">Email Address</h4>
-                <p className="text-slate-500 mt-0.5">info@sithisha.co.uk</p>
+                <p className="text-slate-500 mt-0.5">Kannanmithusan@gmail.com</p>
               </div>
             </div>
           </div>

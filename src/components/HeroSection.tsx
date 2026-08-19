@@ -49,7 +49,7 @@ export default function HeroSection({ heroImages = [] }: HeroSectionProps) {
   const headline = rawHeadline.replace(/grocery|groceries/gi, 'Masala');
   const rawHeadlineHighlight = currentHero?.titleHighlight || 'OF HOME.';
   const headlineHighlight = rawHeadlineHighlight.replace(/grocery|groceries/gi, 'Masala');
-  const rawBadge = currentHero?.badge || 'Authentic UK Masala & Snacks';
+  const rawBadge = currentHero?.badge || 'Authentic Jaffna & Indian Masala & Snacks';
   const badge = rawBadge.replace(/grocery|groceries/gi, 'Masala');
   const rawDescription =
     currentHero?.description ||

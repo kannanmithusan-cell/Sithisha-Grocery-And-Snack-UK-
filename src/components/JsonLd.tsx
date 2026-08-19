@@ -25,8 +25,8 @@ export function getStoreSchema(siteUrl: string) {
     image: `${siteUrl}/hero-showcase.png`,
     description:
       'Authentic South Asian masalas, Jaffna mixture savouries, Ceylon spices, and everyday UK groceries in Birmingham.',
-    telephone: '+44741530377',
-    email: 'info@sithisha.co.uk',
+    telephone: '+447393139705',
+    email: 'Kannanmithusan@gmail.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '120 Parsons Hill',
@@ -59,7 +59,7 @@ export function getStoreSchema(siteUrl: string) {
     currenciesAccepted: 'GBP',
     paymentAccepted: 'Cash, Credit Card, Direct WhatsApp',
     sameAs: [
-      'https://wa.me/44741530377',
+      'https://wa.me/447393139705',
     ],
   };
 }

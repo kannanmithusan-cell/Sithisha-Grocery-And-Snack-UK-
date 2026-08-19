@@ -92,7 +92,7 @@ export async function POST(req: NextRequest) {
         storeName: 'Sithisha Masala&snacks',
         address: '120 Parsons Hill, Birmingham, B30 3QP, United Kingdom',
         phone: cleanNumber,
-        email: 'info@sithisha.co.uk',
+        email: 'Kannanmithusan@gmail.com',
         whatsappNumber: cleanNumber,
         deliveryFee: 3.0,
         freeDeliveryThreshold: 30.0,

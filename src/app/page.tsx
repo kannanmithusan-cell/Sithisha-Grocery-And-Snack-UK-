@@ -24,14 +24,14 @@ import JsonLd, { getStoreSchema, getWebSiteSchema } from '@/components/JsonLd';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://sithishamasala.co.uk';
 
 export const metadata: Metadata = {
-  title: 'Authentic UK Masalas, Jaffna Snacks & Ceylon Spices | Sithisha',
+  title: 'Authentic Jaffna & Indian Masalas, Jaffna Snacks & Ceylon Spices | Sithisha',
   description:
     'Browse and order Sri Lankan hand-roasted masalas, authentic Jaffna mixture snacks, aged Basmati rice, and everyday South Asian groceries in Birmingham, UK.',
   alternates: {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: 'Authentic UK Masalas, Jaffna Snacks & Ceylon Spices | Sithisha',
+    title: 'Authentic Jaffna & Indian Masalas, Jaffna Snacks & Ceylon Spices | Sithisha',
     description:
       'Browse and order Sri Lankan hand-roasted masalas, authentic Jaffna mixture snacks, aged Basmati rice, and everyday South Asian groceries in Birmingham, UK.',
     url: SITE_URL,

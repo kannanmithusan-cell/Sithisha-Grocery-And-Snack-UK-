@@ -132,11 +132,11 @@ const Footer: React.FC = () => {
             </p>
             <p className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-amber-400 shrink-0" />
-              <span>{settings.phone || '+44 121 444 8899'}</span>
+              <span>{settings.phone || '+44 7393 139705'}</span>
             </p>
             <p className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-amber-400 shrink-0" />
-              <span>{settings.email || 'info@sithisha.co.uk'}</span>
+              <span>{settings.email || 'Kannanmithusan@gmail.com'}</span>
             </p>
           </div>
         </div>

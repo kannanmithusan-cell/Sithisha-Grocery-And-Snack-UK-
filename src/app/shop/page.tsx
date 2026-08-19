@@ -27,7 +27,7 @@ export async function generateMetadata({
 }: ShopPageProps): Promise<Metadata> {
   const resolvedParams = await searchParams;
 
-  let title = 'Shop Authentic UK Masalas, Snacks & Spices | Sithisha Grocery';
+  let title = 'Shop Authentic Jaffna & Indian Masalas, Snacks & Spices | Sithisha Grocery';
   let description =
     'Browse our complete catalogue of Jaffna savouries, Sri Lankan roasted curry powders, aged Basmati rice, and everyday South Asian provisions available across the UK.';
   let canonical = `${SITE_URL}/shop`;

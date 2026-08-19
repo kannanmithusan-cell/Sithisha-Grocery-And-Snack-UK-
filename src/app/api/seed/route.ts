@@ -213,10 +213,10 @@ export async function GET() {
 
     // Seed Admin User
     await User.deleteMany({});
-    const passwordHash = await bcrypt.hash('admin123', 10);
+    const passwordHash = await bcrypt.hash('Sithisha@052026', 10);
     await User.create({
       name: 'Store Administrator',
-      email: 'admin@sithisha.co.uk',
+      email: 'admin@sithisha',
       passwordHash,
       role: 'admin',
     });

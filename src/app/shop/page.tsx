@@ -126,6 +126,7 @@ async function getShopData(params: Awaited<ShopPageProps['searchParams']>) {
 
     const totalPages = Math.ceil(totalCount / limit) || 1;
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const sanitizeData = (data: any) => {
       if (!data) return data;
       const str = JSON.stringify(data)
@@ -166,7 +167,9 @@ export default async function ShopPage({ searchParams }: ShopPageProps) {
     } else {
       delete query[key];
     }
-    delete query.page; // Reset page on filter change
+    if (key !== 'page') {
+      delete query.page; // Reset page on filter change
+    }
     const queryString = new URLSearchParams(query).toString();
     return `/shop${queryString ? `?${queryString}` : ''}`;
   };
